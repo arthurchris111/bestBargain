@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './component/login/login.component';
 import { RegistrationComponent } from './component/registration/registration.component';
+import { ButtonComponent } from './comonent/button/button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
