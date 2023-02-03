@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm p-lg-4">
+<nav class="navbar navbar-expand-lg navbar-light  sticky-top shadow-sm p-lg-4">
   <div class="container">
     <a class="navbar-brand text-sm-center  text-success fs-5 fw-bold" [routerLink]="['#']"
       routerLinkActive="router-link-active">
@@ -32,7 +32,7 @@
         <li class="nav-item dropdown"><a class="nav-link" [routerLink]="['/']"
             routerLinkActive="router-link-active"><span
               class="material-symbols-outlined icons dropbtn">person</span></a>
-          <div class="dropdown-content shadow-sm tooltip-arrow">
+          <div class="dropdown-content shadow-sm">
             <a class="text-dark text-decoration-none" href="#">Login</a>
             <a class="text-dark text-decoration-none" href="#">Register</a>
           </div>
@@ -41,8 +41,9 @@
         <li class="nav-item dropdown"><a class="nav-link" [routerLink]="['/']"
             routerLinkActive="router-link-active"><span
               class="material-symbols-outlined icons dropbtn">search</span></a>
-          <div class="dropdown-content shadow-sm tooltip-arrow">
-            <a class="text-dark text-decoration-none" href="#">Login</a>
+          <div class="dropdown-content shadow-sm">
+            <input class="form-control shadow-none border-light bg-body p-3 search" placeholder="Search"
+              formControlName="password">
           </div>
         </li>
 
@@ -62,9 +63,6 @@
             </span>
           </a>
         </li>
-
-
-
       </ul>
     </div>
   </div>
