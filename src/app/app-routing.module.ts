@@ -1,7 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [{ path: 'pages-module', loadChildren: () => import('./modules/pages-module/pages-module.module').then(m => m.PagesModuleModule) }, { path: 'product-module', loadChildren: () => import('./modules/product-module/product-module.module').then(m => m.ProductModuleModule) }, { path: 'user-module', loadChildren: () => import('./modules/user-module/user-module.module').then(m => m.UserModuleModule) }, { path: 'authentication-module', loadChildren: () => import('./modules/authentication-module/authentication-module.module').then(m => m.AuthenticationModuleModule) }, { path: 'singleProduct-module', loadChildren: () => import('./modules/product-module/single-product-module/single-product-module.module').then(m => m.SingleProductModuleModule) }, { path: 'allProduct-module', loadChildren: () => import('./modules/product-module/all-product-module/all-product-module.module').then(m => m.AllProductModuleModule) }, { path: 'addProduct-module', loadChildren: () => import('./modules/product-module/add-product-module/add-product-module.module').then(m => m.AddProductModuleModule) }, { path: 'product-list', loadChildren: () => import('./modules/product-module/product-list/product-list.module').then(m => m.ProductListModule) }, { path: 'product-list', loadChildren: () => import('./modules/product-module/product-list/product-list.module').then(m => m.ProductListModule) }, { path: 'product-cart', loadChildren: () => import('./modules/product-module/product-cart/product-cart.module').then(m => m.ProductCartModule) }, { path: 'productList-module', loadChildren: () => import('./modules/product-module/product-list-module/product-list-module.module').then(m => m.ProductListModuleModule) }, { path: 'pages', loadChildren: () => import('./modules/pages/pages.module').then(m => m.PagesModule) }, { path: 'product', loadChildren: () => import('./modules/product/product.module').then(m => m.ProductModule) }, { path: 'user', loadChildren: () => import('./modules/user/user.module').then(m => m.UserModule) }, { path: 'authetication', loadChildren: () => import('./modules/authentication/authentication.module').then(m => m.AuthenticationModule) }, { path: 'all-product', loadChildren: () => import('./modules/product/all-product/all-product.module').then(m => m.AllProductModule) }, { path: 'single-product', loadChildren: () => import('./modules/product/single-product/single-product.module').then(m => m.SingleProductModule) }, { path: 'add-product', loadChildren: () => import('./modules/product/add-product/add-product.module').then(m => m.AddProductModule) }, { path: 'product-list', loadChildren: () => import('./modules/product/product-list/product-list.module').then(m => m.ProductListModule) }, { path: 'product-cart', loadChildren: () => import('./modules/product/product-cart/product-cart.module').then(m => m.ProductCartModule) }, { path: 'single-cart', loadChildren: () => import('./modules/product/product-cart/single-cart/single-cart.module').then(m => m.SingleCartModule) }, { path: 'all-cart', loadChildren: () => import('./modules/product/product-cart/all-cart/all-cart.module').then(m => m.AllCartModule) }];
+const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () =>
+      import('./modules/pages.module').then((m) => m.PagesModule),
+  },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./modules/authentication/authentication.module').then(
+        (m) => m.AuthenticationModule
+      ),
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

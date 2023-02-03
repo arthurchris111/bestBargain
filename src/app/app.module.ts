@@ -1,12 +1,15 @@
+import { AuthenticationComponent } from './modules/authentication/authentication.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { LoginComponent } from './component/login/login.component';
-import { RegistrationComponent } from './component/registration/registration.component';
+import { LoginComponent } from './modules/authentication/partials/login/login.component';
+import { RegistrationComponent } from './modules/authentication/partials/registration/registration.component';
 import { ButtonComponent } from './component/button/button.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { NavbarComponent } from './layout/header/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +17,8 @@ import { ButtonComponent } from './component/button/button.component';
     LoginComponent,
     RegistrationComponent,
     ButtonComponent,
+    HeaderComponent,
+    NavbarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
