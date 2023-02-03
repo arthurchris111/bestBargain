@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm p-lg-4">
   <div class="container">
-    <a class="navbar-brand  text-success fs-5 fw-bold" [routerLink]="['#']" routerLinkActive="router-link-active">
+    <a class="navbar-brand text-sm-center  text-success fs-5 fw-bold" [routerLink]="['#']"
+      routerLinkActive="router-link-active">
       <img src="../../../../assets/images/—Pngtree—3d supermarket trolly out of_8416063.png" alt="" class="logo"
         width="70" height="70">
       <span class="logo fs-3 text-danger">bestBargain</span>
@@ -10,34 +11,61 @@
       aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- text -->
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item mx-lg-4" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
+        <li class="nav-item mx-lg-5" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
             routerLinkActive="router-link-active">Home</a></li>
+
         <li class="nav-item" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
             routerLinkActive="router-link-active">Home</a></li>
-        <li class="nav-item mx-lg-4" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
+
+        <li class="nav-item mx-lg-5" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
             routerLinkActive="router-link-active">Home</a></li>
+
         <li class="nav-item" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
             routerLinkActive="router-link-active">Home</a></li>
       </ul>
+
+
       <!-- icons -->
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item mx-lg-4" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
-            routerLinkActive="router-link-active"><span class="material-symbols-outlined text-danger">
-              person</span></a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown"><a class="nav-link" [routerLink]="['/']"
+            routerLinkActive="router-link-active"><span
+              class="material-symbols-outlined icons dropbtn">person</span></a>
+          <div class="dropdown-content shadow-sm tooltip-arrow">
+            <a class="text-dark text-decoration-none" href="#">Login</a>
+            <a class="text-dark text-decoration-none" href="#">Register</a>
+          </div>
         </li>
 
-        <li class="nav-item" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
-            routerLinkActive="router-link-active"><span class="material-symbols-outlined">search</span></a></li>
+        <li class="nav-item dropdown"><a class="nav-link" [routerLink]="['/']"
+            routerLinkActive="router-link-active"><span
+              class="material-symbols-outlined icons dropbtn">search</span></a>
+          <div class="dropdown-content shadow-sm tooltip-arrow">
+            <a class="text-dark text-decoration-none" href="#">Login</a>
+          </div>
+        </li>
 
-        <li class="nav-item mx-lg-4" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
-            routerLinkActive="router-link-active"> <span class="material-symbols-outlined"> favorite</span></a></li>
+        <li class="nav-item position-relative"><a class="nav-link" [routerLink]="['/']"
+            routerLinkActive="router-link-active">
+            <span class="material-symbols-outlined icons">favorite</span>
+            <span class="position-absolute translate-middle badge rounded-pill bg-danger">0
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item position-relative"><a class="nav-link" [routerLink]="['/']"
+            routerLinkActive="router-link-active">
+            <span class="material-symbols-outlined icons">shopping_cart</span>
+            <span class="position-absolute  translate-middle badge rounded-pill bg-danger">0
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
 
-        <li class="nav-item" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
-            routerLinkActive="router-link-active"><span class="material-symbols-outlined">shopping_cart</span></a></li>
+
+
       </ul>
-
-
     </div>
   </div>
 </nav>
