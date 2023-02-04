@@ -11,19 +11,11 @@
       aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- text -->
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item mx-lg-5" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
-            routerLinkActive="router-link-active">Home</a></li>
-
-        <li class="nav-item" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
-            routerLinkActive="router-link-active">Home</a></li>
-
-        <li class="nav-item mx-lg-5" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
-            routerLinkActive="router-link-active">Home</a></li>
-
-        <li class="nav-item" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
-            routerLinkActive="router-link-active">Home</a></li>
+        <ng-container *ngFor="let item of menuItems">
+          <li class="nav-item mx-lg-5" id="hover-underline-animation"><a class="nav-link" [routerLink]="['/']"
+              routerLinkActive="router-link-active">Home</a></li>
+        </ng-container>
       </ul>
 
 
@@ -32,9 +24,11 @@
         <li class="nav-item dropdown"><a class="nav-link" [routerLink]="['/']"
             routerLinkActive="router-link-active"><span
               class="material-symbols-outlined icons dropbtn">person</span></a>
-          <div class="dropdown-content shadow-sm slide-in-top">
-            <a class="text-dark text-decoration-none" href="#">Login</a>
-            <a class="text-dark text-decoration-none" href="#">Register</a>
+
+          <div class="dropdown-content shadow-sm slide-in-top p-2">
+            <a class="nav-link text-dark text-decoration-none" [routerLink]="['login']"
+              routerLinkActive="router-link-active">Login</a>
+            <a class="nav-link text-dark text-decoration-none" href="#">Register</a>
           </div>
         </li>
 
@@ -42,8 +36,15 @@
             routerLinkActive="router-link-active"><span
               class="material-symbols-outlined icons dropbtn">search</span></a>
           <div class="dropdown-content shadow-sm slide-in-top">
-            <input class="form-control shadow-none border-light bg-body p-3 search" placeholder="Search"
-              formControlName="password">
+
+            <div class="d-flex align-items-center border-0 shadow-sm">
+              <button class="bg-transparent border-0 mt-2">
+                <span class="material-symbols-outlined icons dropbtn">search</span>
+              </button>
+              <input class="form-control shadow-none border-0 bg-body py-3 search" placeholder="Search"
+                formControlName="password">
+            </div>
+
           </div>
         </li>
 
