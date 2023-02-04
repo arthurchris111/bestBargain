@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-light  sticky-top shadow-sm p-lg-4">
+<nav class="navbar navbar-expand-lg navbar-light  sticky-top shadow-sm p-lg-3">
   <div class="container">
     <a class="navbar-brand text-sm-center  text-success fs-5 fw-bold" [routerLink]="['#']"
       routerLinkActive="router-link-active">
       <img src="../../../../assets/images/—Pngtree—3d supermarket trolly out of_8416063.png" alt="" class="logo"
         width="70" height="70">
-      <span class="logo fs-3 text-danger">bestBargain</span>
+      <span class="logo fs-3 text-danger text-focus-in ">bestBargain</span>
     </a>
     <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -17,7 +17,6 @@
               routerLinkActive="router-link-active">Home</a></li>
         </ng-container>
       </ul>
-
 
       <!-- icons -->
       <ul class="navbar-nav ms-auto">
@@ -35,8 +34,7 @@
         <li class="nav-item dropdown"><a class="nav-link" [routerLink]="['/']"
             routerLinkActive="router-link-active"><span
               class="material-symbols-outlined icons dropbtn">search</span></a>
-          <div class="dropdown-content shadow-sm slide-in-top">
-
+          <div class="dropdown-content shadow-sm slide-in-top ">
             <div class="d-flex align-items-center border-0 shadow-sm">
               <button class="bg-transparent border-0 mt-2">
                 <span class="material-symbols-outlined icons dropbtn">search</span>
@@ -44,7 +42,6 @@
               <input class="form-control shadow-none border-0 bg-body py-3 search" placeholder="Search"
                 formControlName="password">
             </div>
-
           </div>
         </li>
 
@@ -56,6 +53,7 @@
             </span>
           </a>
         </li>
+
         <li class="nav-item position-relative"><a class="nav-link" [routerLink]="['/']"
             routerLinkActive="router-link-active">
             <span class="material-symbols-outlined icons">shopping_cart</span>

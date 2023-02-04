@@ -14,7 +14,6 @@
 .dropdown {
   position: relative;
   display: inline-block;
-
 }
 
 .dropdown-content {
@@ -23,10 +22,12 @@
   background-color: #ffffff;
   min-width: 160px;
   z-index: 1;
+  left: -8rem
 }
 
 .search{
-  width: 200px;
+  width: 250px;
+
 }
 
 .dropdown-content a {
@@ -75,3 +76,32 @@
 }
 
 
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
