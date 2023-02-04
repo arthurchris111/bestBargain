@@ -10,6 +10,7 @@ import { RegistrationComponent } from './modules/authentication/partials/registr
 import { ButtonComponent } from './component/button/button.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { NavbarComponent } from './layout/header/navbar/navbar.component';
+import { LoginButtonComponent } from './component/button/login-button/login-button.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NavbarComponent } from './layout/header/navbar/navbar.component';
     ButtonComponent,
     HeaderComponent,
     NavbarComponent,
+    LoginButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
