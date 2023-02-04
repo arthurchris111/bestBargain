@@ -11,8 +11,6 @@
   color: red!important;
 }
 
-
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -40,48 +38,36 @@
   display: block;
 }
 
-.search{
 
-  margin-top: -70px;
-  margin-left: 10px;
+.slide-in-top {
+	-webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 
-input[type='email'],
-input[type='search'],
-input[type='number'],
-input[type='url'],
-input[type='tel'],
-input[type='text'],
-input[type='password'],
-textarea,
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-  /* Removing the inner shadow on iOS inputs */
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
-
-.search {
-  width: 100%;
-  max-width: 100%;
-  border: 1px solid #E6E6E6;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  vertical-align: middle;
-  padding: 0 15px;
-  height: 45px;
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 
-.search:focus
-{
-  outline: none;
-  border-color: #F86B73;
-}
