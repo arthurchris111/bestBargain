@@ -5,33 +5,31 @@
         width="90px" height="80px">
       <span class="logo fs-3 text-danger text-focus-in logo fw-bold">bestBargain</span>
 
-      <div class="text bg-light p-5 my-2">
+      <div class="text bg-light p-4 my-2">
         <h4 class="fw-bold">What's your email address?</h4>
         <p>Type your Email and Password to login your bestBargain account.</p>
       </div>
     </div>
-    <div class="col-12 text-center m-0" style="width: 35rem;">
+    <div class="col-12  m-0" style="width: 35rem;">
       <form class="mt-3">
         <!-- email address input -->
-        <div class="form-group mb-3">
-          <input class="form-control shadow-none p-3" type="email" id="email" placeholder="Email Address"
+        <div class="form-group mb-3 d-flex justify-content-center">
+          <input class="form-control shadow-none p-3 w-75" type="email" id="email" placeholder="Email Address"
             formControlName="email">
         </div>
         <!-- password input -->
-        <div class="form-group">
-          <input class="form-control shadow-none p-3" type="password" id="password" placeholder="Enter Password"
+        <div class="form-group d-flex justify-content-center">
+          <input class="form-control shadow-none p-3 w-75" type="password" id="password" placeholder="Enter Password"
             formControlName="password">
         </div>
-        <!-- button -->
-        <app-button [text]="'login'" [buttonClass]="'btn-danger'"></app-button>
-        <app-button [text]="'login in with gmail'" [buttonClass]="'btn-danger disabled'"></app-button>
-        <img class="mail" src="../../../../../assets/images/gmail (1).png" width="30" height="30" alt="">
-        <div class="register text-start">
+        <!-- text -->
+        <div class="register text-center mt-2">
+          <app-button [text]="'login'" [buttonClass]="'btn-danger w-75'"></app-button>
           <p class="mb-2">Don't have an account?
-            <a [routerLink]="['/signup']" routerLinkActive="router-link-active"
+            <a [routerLink]="['/registration']" routerLinkActive="router-link-active"
               class="text-decoration-none text-success fw-bold"> Sign Up</a>
           </p>
-          <p><a [routerLink]="['/signup']" routerLinkActive="router-link-active"
+          <p><a [routerLink]="['/#']" routerLinkActive="router-link-active"
               class="text-decoration-none text-success fw-bold">Forgotten Password?</a>
           </p>
         </div>
