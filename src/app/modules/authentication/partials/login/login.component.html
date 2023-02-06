@@ -24,6 +24,17 @@
         </div>
         <!-- button -->
         <app-button [text]="'login'" [buttonClass]="'btn-danger'"></app-button>
+        <app-button [text]="'login in with gmail'" [buttonClass]="'btn-danger disabled'"></app-button>
+        <img class="mail" src="../../../../../assets/images/gmail (1).png" width="30" height="30" alt="">
+        <div class="register text-start">
+          <p class="mb-2">Don't have an account?
+            <a [routerLink]="['/signup']" routerLinkActive="router-link-active"
+              class="text-decoration-none text-success fw-bold"> Sign Up</a>
+          </p>
+          <p><a [routerLink]="['/signup']" routerLinkActive="router-link-active"
+              class="text-decoration-none text-success fw-bold">Forgotten Password?</a>
+          </p>
+        </div>
       </form>
     </div>
   </div>
