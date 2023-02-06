@@ -5,7 +5,7 @@
         width="90px" height="80px">
       <span class="logo fs-3 text-danger text-focus-in logo fw-bold">bestBargain</span>
 
-      <div class="text bg-light p-5">
+      <div class="text bg-light p-5 my-2">
         <h4 class="fw-bold">What's your email address?</h4>
         <p>Type your Email and Password to login your bestBargain account.</p>
       </div>
@@ -23,6 +23,7 @@
             formControlName="password">
         </div>
         <!-- button -->
+        <app-button [text]="'login'" [buttonClass]="'btn-danger'"></app-button>
       </form>
     </div>
   </div>
