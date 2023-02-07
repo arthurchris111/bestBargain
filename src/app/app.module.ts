@@ -10,6 +10,8 @@ import { RegistrationComponent } from './modules/authentication/partials/registr
 import { ButtonComponent } from './component/button/button.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { NavbarComponent } from './layout/header/navbar/navbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,13 @@ import { NavbarComponent } from './layout/header/navbar/navbar.component';
     HeaderComponent,
     NavbarComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
   exports: [],

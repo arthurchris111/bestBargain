@@ -48,38 +48,14 @@
               formControlName="password">
           </div>
         </div>
-        <!-- email address input -->
-        <!-- <div class="form-group mb-3 d-flex justify-content-center">
-          <input class="form-control shadow-none p-3 w-75" type="email" id="email" placeholder="Email Address"
-            formControlName="email">
-        </div> -->
-        <!-- username -->
-        <!-- <div class="form-group mb-3 d-flex justify-content-center">
-          <input class="form-control shadow-none p-3 w-75" type="text" id="text" placeholder="Enter Username"
-            formControlName="text">
-        </div> -->
-        <!-- first name -->
-        <!-- <div class="form-group mb-3 d-flex justify-content-center">
-          <input class="form-control shadow-none p-3 w-75" type="text" id="text" placeholder="Enter First Name"
-            formControlName="text">
-        </div> -->
-        <!-- last name -->
-        <!-- <div class="form-group mb-3 d-flex justify-content-center">
-          <input class="form-control shadow-none p-3 w-75" type="text" id="text" placeholder=" Enter Last Name"
-            formControlName="text">
-        </div> -->
-        <!-- password input -->
-        <!-- <div class="form-group d-flex justify-content-center">
-          <input class="form-control shadow-none p-3 w-75" type="password" id="password" placeholder="Enter Password"
-            formControlName="password">
-        </div> -->
+
         <!-- button -->
         <div class="register text-center">
-          <app-button [text]="'Resister'" [buttonClass]="'btn-danger w-75'"></app-button>
+          <app-button [text]="'Resister'" [buttonClass]="'btn-danger w-50'"></app-button>
           <p class="mb-2">Already have an account?
             <!-- signUp -->
-            <a [routerLink]="['/login']" routerLinkActive="router-link-active"
-              class="text-decoration-none text-success fw-bold"> Sign Up</a>
+            <a [routerLink]="['/auth/login']" routerLinkActive="router-link-active"
+              class="text-decoration-none text-danger fw-bold">Login</a>
           </p>
         </div>
       </form>
