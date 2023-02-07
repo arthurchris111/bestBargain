@@ -11,6 +11,7 @@ import { Validators } from '@angular/forms';
 export class RegistrationComponent implements OnInit {
   registration!: FormGroup;
   show: boolean = false;
+  submitted: boolean = false;
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -28,6 +29,7 @@ export class RegistrationComponent implements OnInit {
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
       password: ['', [Validators.required, Validators.minLength(8)]],
+      number: ['', [Validators.required, Validators.minLength(10)]],
     });
   }
 
@@ -35,6 +37,7 @@ export class RegistrationComponent implements OnInit {
     this.registrationForm();
   }
 
+  // hide and show password
   togglePassword() {
     this.show = !this.show;
   }
