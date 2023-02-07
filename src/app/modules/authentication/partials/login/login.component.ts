@@ -10,7 +10,8 @@ import { Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   signUp!: FormGroup;
-  // show: boolean = false;
+  show: boolean = false;
+  submitted: boolean = false;
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -33,7 +34,7 @@ export class LoginComponent implements OnInit {
   }
 
   // toggle password
-  // togglePassword() {
-  //   this.show = !this.show;
-  // }
+  togglePassword() {
+    this.show = !this.show;
+  }
 }
