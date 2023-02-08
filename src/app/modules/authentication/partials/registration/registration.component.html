@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="col-12 m-0" style="width: 45rem;">
-      <form [formGroup]="registration" class="mt-3">
+      <form [formGroup]="registration" (ngSubmit)="onSubmit(registration.value)" class="mt-3">
         <div class="row mt-4">
           <!-- email -->
           <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
