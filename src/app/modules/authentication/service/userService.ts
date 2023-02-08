@@ -9,8 +9,8 @@ export class userService {
 
   constructor(private http: HttpClient, private route: Router) {}
 
-  //postUser
-  createAndStorePost(
+  //addUser
+  addUser(
     email: any,
     username: string,
     firstName: string,
@@ -30,5 +30,10 @@ export class userService {
     this.http.post('', postData).subscribe((responseData) => {
       console.log(responseData);
     });
+  }
+
+  // getUser
+  getUser() {
+    return this.http.get<any>('');
   }
 }

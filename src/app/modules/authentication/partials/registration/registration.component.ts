@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { apiService } from '../../service/apiService';
 import { postUser } from './registration.model';
 import { userService } from '../../service/userService';
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -19,7 +20,11 @@ export class RegistrationComponent implements OnInit {
   user: any = {};
   userSubmitted: boolean = false;
 
-  constructor(private formBuilder: FormBuilder, private route: Router) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private route: Router,
+    private userService: userService
+  ) {}
 
   registrationForm(): void {
     this.registration = this.formBuilder.group({
@@ -63,5 +68,14 @@ export class RegistrationComponent implements OnInit {
     this.registration.reset();
     this.submitted = false;
     this.userSubmitted = false;
+
+    this.userService.addUser(
+      postData.email,
+      postData.username,
+      postData.firstName,
+      postData.lastName,
+      postData.number,
+      postData.password
+    );
   }
 }
