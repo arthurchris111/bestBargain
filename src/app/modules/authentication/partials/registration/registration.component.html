@@ -27,7 +27,7 @@
             </div>
           </div>
 
-          <div class="col mb-4">
+          <div class="col mb-3">
             <!-- username -->
             <input class="form-control shadow-none p-3" type="text" id="username" placeholder="Enter Username"
               formControlName="username">
@@ -42,7 +42,7 @@
 
         <div class="row ">
           <!-- first name -->
-          <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
+          <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
             <input class="form-control shadow-none p-3" type="text" id="firstName" placeholder="Enter First Name"
               formControlName="firstName">
             <div class="error"
@@ -52,7 +52,7 @@
               </small>
             </div>
           </div>
-          <div class="col mb-4">
+          <div class="col mb-3">
             <!-- last name -->
             <input class="form-control shadow-none p-3" type="text" id="lastName" placeholder="Enter Last Name"
               formControlName="lastName">
@@ -67,7 +67,7 @@
 
         <div class="row">
           <!-- password -->
-          <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
+          <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
             <input class="form-control shadow-none p-3" type="password" id="password" placeholder="Enter Password"
               formControlName="password">
             <!-- hide and show password -->
@@ -91,7 +91,7 @@
           <!-- number -->
           <div class="col">
             <input class="form-control shadow-none p-3" type="number" id="number" placeholder="Phone Number"
-              formControlName="confirmPassword">
+              formControlName="number">
             <!-- error messages -->
             <div class="error"
               *ngIf="(registration.get('number')?.invalid && submitted) || registration.get('number')?.touched">

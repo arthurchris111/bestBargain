@@ -10,8 +10,8 @@ import { Validators } from '@angular/forms';
 })
 export class RegistrationComponent implements OnInit {
   registration!: FormGroup;
-  show: boolean = false;
   submitted: boolean = false;
+  show: boolean = false;
 
   constructor(private formBuilder: FormBuilder) {}
 
