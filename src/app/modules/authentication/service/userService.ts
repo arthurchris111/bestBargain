@@ -1,13 +1,13 @@
 import { Router } from '@angular/router';
-import { postUser } from '../partials/registration/registration.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { postUserDetails } from '../models/authentication.model';
 
 @Injectable({ providedIn: 'root' })
 export class userService {
   signUp: any;
 
-  constructor(private http: HttpClient, private route: Router) {}
+  constructor(private http: HttpClient) {}
 
   //addUser
   addUser(
@@ -18,7 +18,7 @@ export class userService {
     password: any,
     number: number
   ) {
-    const postData: postUser = {
+    const postData: postUserDetails = {
       email: email,
       username: username,
       firstName: firstName,
@@ -26,10 +26,8 @@ export class userService {
       password: password,
       number: number,
     };
-    // backend url missing
-    this.http.post('', postData).subscribe((responseData) => {
-      console.log(responseData);
-    });
+
+    return this.http.post('users', postData);
   }
 
   // getUser

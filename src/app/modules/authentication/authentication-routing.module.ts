@@ -5,9 +5,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthenticationComponent } from './authentication.component';
 
 const routes: Routes = [
-  { path: '', component: AuthenticationComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'registration', component: RegistrationComponent },
+  {
+    path: '',
+    component: AuthenticationComponent,
+    children: [
+      { path: 'login', component: LoginComponent },
+      { path: 'registration', component: RegistrationComponent },
+      { path: '***', redirectTo: 'login' },
+    ],
+  },
 ];
 
 @NgModule({

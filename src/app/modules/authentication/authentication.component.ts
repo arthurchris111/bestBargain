@@ -1,15 +1,15 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-authentication',
   templateUrl: './authentication.component.html',
-  styleUrls: ['./authentication.component.scss']
+  styleUrls: ['./authentication.component.scss'],
 })
 export class AuthenticationComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private router: Router) {
+    this.router.url;
   }
 
+  ngOnInit(): void {}
 }

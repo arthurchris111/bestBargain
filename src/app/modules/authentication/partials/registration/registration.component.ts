@@ -5,8 +5,8 @@ import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { apiService } from '../../service/apiService';
-import { postUser } from './registration.model';
 import { userService } from '../../service/userService';
+import { postUserDetails } from '../../models/authentication.model';
 
 @Component({
   selector: 'app-registration',
@@ -28,14 +28,7 @@ export class RegistrationComponent implements OnInit {
 
   registrationForm(): void {
     this.registration = this.formBuilder.group({
-      email: [
-        '',
-        [
-          Validators.required,
-          Validators.email,
-          Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$'),
-        ],
-      ],
+      email: ['', [Validators.required, Validators.email]],
       username: ['', [Validators.required]],
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
@@ -54,7 +47,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   // submitting registration from
-  onSubmit(postData: postUser) {
+  onSubmit(postData: postUserDetails) {
     this.submitted = true;
     this.userSubmitted = true;
 
@@ -62,10 +55,10 @@ export class RegistrationComponent implements OnInit {
     if (this.registration.invalid) {
       return;
     } else {
-      this.route.navigate(['login']);
+      this.route.navigate(['/auth/login']);
     }
 
-    this.registration.reset();
+    // this.registration.reset();
     this.submitted = false;
     this.userSubmitted = false;
 
