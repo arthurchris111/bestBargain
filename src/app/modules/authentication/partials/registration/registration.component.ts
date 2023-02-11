@@ -4,9 +4,9 @@ import { FormGroup } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { apiService } from '../../service/apiService';
-import { userService } from '../../service/userService';
-import { postUserDetails } from '../../models/authentication.model';
+// import { apiService } from '../../service/apiService';
+// import { userService } from '../../service/userService';
+// import { postUserDetails } from '../../models/authentication.model';
 
 @Component({
   selector: 'app-registration',
@@ -22,8 +22,7 @@ export class RegistrationComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private route: Router,
-    private userService: userService
+    private route: Router // private userService: userService
   ) {}
 
   registrationForm(): void {
@@ -47,7 +46,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   // submitting registration from
-  onSubmit(postData: postUserDetails) {
+  onSubmit() {
     this.submitted = true;
     this.userSubmitted = true;
 
@@ -62,13 +61,13 @@ export class RegistrationComponent implements OnInit {
     this.submitted = false;
     this.userSubmitted = false;
 
-    this.userService.addUser(
-      postData.email,
-      postData.username,
-      postData.firstName,
-      postData.lastName,
-      postData.number,
-      postData.password
-    );
+    // this.userService.addUser(
+    //   postData.email,
+    //   postData.username,
+    //   postData.firstName,
+    //   postData.lastName,
+    //   postData.number,
+    //   postData.password
+    // );
   }
 }

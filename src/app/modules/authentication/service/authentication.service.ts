@@ -22,7 +22,7 @@ export class AuthenticationService {
 
   public registration(data: RegistrationModel): Observable<any> {
     return this.httpClient
-      .post(this.endpoint.LOGIN_ENDPOINT, data)
+      .post(this.endpoint.REGISTRATION_ENDPOINT, data)
       .pipe(catchError((error: unknown) => throwError(() => error)));
   }
 }
