@@ -25,7 +25,7 @@
            <!-- username -->
            <input class="form-control shadow-none p-3" type="text" id="username" placeholder="Enter Username"
              formControlName="username">
-           <div class="error"
+           <div class="error text-start"
              *ngIf="(registration.get('username')?.invalid && submitted) || registration.get('username')?.touched">
              <small class="text-danger" *ngIf="registration.get('username')?.errors?.['required']">
                Username required*
@@ -50,7 +50,7 @@
            <!-- last name -->
            <input class="form-control shadow-none p-3" type="text" id="lastName" placeholder="Enter Last Name"
              formControlName="lastName">
-           <div class="error"
+           <div class="error text-start"
              *ngIf="(registration.get('lastName')?.invalid && submitted) || registration.get('lastName')?.touched">
              <small class="text-danger" *ngIf="registration.get('lastName')?.errors?.['required']">
                Last Name required*
@@ -100,15 +100,16 @@
        </div>
 
        <!-- button -->
-       <div class="register text-center">
-         <app-button [text]="'Resister'" [buttonClass]="'btn-danger w-75'"></app-button>
-         <p class="mb-2">Already have an account?
-           <!-- signUp -->
-           <a [routerLink]="['/auth/login']" routerLinkActive="router-link-active"
-             class="text-decoration-none text-success fw-bolder">Login</a>
-         </p>
+       <div class="row d-flex justify-content-center">
+         <div class="register col-lg-7 col-sm-12 col-md-12 ">
+           <app-button [text]="'Resister'" [buttonClass]="'btn-danger w-75'"></app-button>
+           <p class="mb-2">Already have an account?
+             <!-- signUp -->
+             <a [routerLink]="['/auth/login']" routerLinkActive="router-link-active"
+               class="text-decoration-none text-success fw-bolder">Login</a>
+           </p>
+         </div>
        </div>
      </form>
    </div>
-
  </div>
