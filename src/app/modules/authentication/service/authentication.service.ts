@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { Endpoint } from 'src/app/core/constance/endpoints';
 import { LoginModel } from '../models/authentication.model';
+import { RegistrationModel } from '../models/authentication.model';
 
 @Injectable({
   providedIn: 'root',
@@ -19,7 +20,7 @@ export class AuthenticationService {
       .pipe(catchError((error: unknown) => throwError(() => error)));
   }
 
-  public logiSn(data: LoginModel): Observable<any> {
+  public registration(data: RegistrationModel): Observable<any> {
     return this.httpClient
       .post(this.endpoint.LOGIN_ENDPOINT, data)
       .pipe(catchError((error: unknown) => throwError(() => error)));

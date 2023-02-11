@@ -5,7 +5,7 @@ export class LoginModel {
   password: string;
 }
 
-export interface postUserDetails {
+export interface RegistrationModel {
   email: any;
   username: string;
   firstName: string;
