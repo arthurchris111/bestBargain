@@ -40,7 +40,7 @@ export class RegistrationComponent implements OnInit {
     this.registrationForm();
   }
 
-  // hide and show password
+  //toggle password
   togglePassword() {
     this.show = !this.show;
   }
