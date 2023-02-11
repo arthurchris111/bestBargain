@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 // import { apiService } from '../../service/apiService';
 // import { userService } from '../../service/userService';
 // import { postUserDetails } from '../../models/authentication.model';
