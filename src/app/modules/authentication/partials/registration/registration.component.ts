@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import { AuthenticationService } from '../../service/authentication.service';
+import { StorageService } from 'src/app/core/services/storage.service';
 // import { HttpClient } from '@angular/common/http';
 // import { apiService } from '../../service/apiService';
 // import { userService } from '../../service/userService';
@@ -22,7 +24,9 @@ export class RegistrationComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private route: Router // private userService: userService
+    private route: Router,
+    private authenticationService: AuthenticationService,
+    private storageService: StorageService
   ) {}
 
   registrationForm(): void {
@@ -31,7 +35,7 @@ export class RegistrationComponent implements OnInit {
       username: ['', [Validators.required]],
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
+      password: ['', [Validators.required]],
       number: ['', [Validators.required, Validators.minLength(10)]],
     });
   }
@@ -49,6 +53,12 @@ export class RegistrationComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     this.userSubmitted = true;
+
+    this.authenticationService
+      .registration(this.registration.value)
+      .subscribe((res: any) => {
+        this.storageService.setItem('token', res.token);
+      });
 
     //route registration page to login if valid
     if (this.registration.invalid) {

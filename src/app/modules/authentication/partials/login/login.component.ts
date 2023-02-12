@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   loginForm(): void {
     this.signUp = this.formBuilder.group({
       username: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
+      password: ['', [Validators.required]],
     });
   }
 
@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
     this.authenticationService
       .login(this.signUp.value)
       .subscribe((res: any) => {
-        // this.storageService.set('token', res.token);
+        this.storageService.setItem('token', res.token);
         console.log('==========================================>', res);
       });
   }
