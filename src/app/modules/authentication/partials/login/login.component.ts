@@ -47,11 +47,12 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+    this.submitted = true;
     this.isFetching = true;
     this.authenticationService
       .login(this.signUp.value)
       .subscribe((res: any) => {
-        this.storageService.setItem('token', res.token);
+        this.storageService.set('token', res.token);
         console.log('==========================================>', res);
       });
   }

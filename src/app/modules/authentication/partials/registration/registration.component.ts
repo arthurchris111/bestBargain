@@ -57,7 +57,7 @@ export class RegistrationComponent implements OnInit {
     this.authenticationService
       .registration(this.registration.value)
       .subscribe((res: any) => {
-        this.storageService.setItem('token', res.token);
+        // this.storageService.setItem('token', res.token);
       });
 
     //route registration page to login if valid
