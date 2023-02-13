@@ -12,6 +12,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { NavbarComponent } from './layout/header/navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SocialsComponent } from './component/socials/socials.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     ButtonComponent,
     HeaderComponent,
     NavbarComponent,
+    SocialsComponent,
   ],
   imports: [
     BrowserModule,
