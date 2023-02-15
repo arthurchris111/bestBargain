@@ -1,3 +1,4 @@
+import { RegistrationModel } from './../../models/authentication.model';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
@@ -16,7 +17,7 @@ import { StorageService } from 'src/app/core/services/storage.service';
   styleUrls: ['./registration.component.scss'],
 })
 export class RegistrationComponent implements OnInit {
-  registration!: FormGroup;
+  registration: FormGroup;
   submitted: boolean = false;
   show: boolean = false;
   user: any = {};
@@ -36,7 +37,7 @@ export class RegistrationComponent implements OnInit {
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
       password: ['', [Validators.required]],
-      number: ['', [Validators.required, Validators.minLength(10)]],
+      phone: ['', [Validators.required, Validators.minLength(10)]],
     });
   }
 
@@ -53,31 +54,22 @@ export class RegistrationComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     this.userSubmitted = true;
-
-    this.authenticationService
-      .registration(this.registration.value)
-      .subscribe((res: any) => {
-        // this.storageService.setItem('token', res.token);
-      });
-
-    //route registration page to login if valid
     if (this.registration.invalid) {
       return;
-    } else {
-      this.route.navigate(['/auth/login']);
     }
-
-    // this.registration.reset();
-    this.submitted = false;
-    this.userSubmitted = false;
-
-    // this.userService.addUser(
-    //   postData.email,
-    //   postData.username,
-    //   postData.firstName,
-    //   postData.lastName,
-    //   postData.number,
-    //   postData.password
-    // );
+    const users: RegistrationModel = {
+      email: this.registration.value.email,
+      username: this.registration.value.username,
+      name: {
+        firstname: this.registration.value.firstName,
+        lastname: this.registration.value.lastName,
+      },
+      password: this.registration.value.password,
+      phone: this.registration.value.phone,
+    };
+    console.log(users);
+    this.authenticationService.registration(users).subscribe((res) => {
+      console.log(res);
+    });
   }
 }

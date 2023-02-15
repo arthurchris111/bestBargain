@@ -14,12 +14,14 @@ export class AuthenticationService {
     this.endpoint = new Endpoint();
   }
 
+  // login
   public login(data: LoginModel): Observable<any> {
     return this.httpClient
       .post(this.endpoint.LOGIN_ENDPOINT, data)
       .pipe(catchError((error: unknown) => throwError(() => error)));
   }
 
+  // registration
   public registration(data: RegistrationModel): Observable<any> {
     return this.httpClient
       .post(this.endpoint.REGISTRATION_ENDPOINT, data)

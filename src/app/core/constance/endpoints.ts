@@ -3,5 +3,5 @@ export class Endpoint {
   baseEndpoint = environment.baseEndpoint;
 
   LOGIN_ENDPOINT = this.baseEndpoint + 'auth/login';
-  REGISTRATION_ENDPOINT = this.baseEndpoint + 'auth/registration';
+  REGISTRATION_ENDPOINT = this.baseEndpoint + 'users';
 }

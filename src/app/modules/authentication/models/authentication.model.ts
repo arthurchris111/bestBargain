@@ -6,10 +6,12 @@ export class LoginModel {
 }
 
 export interface RegistrationModel {
-  email: any;
+  email: string;
   username: string;
-  firstName: string;
-  lastName: string;
-  password: any;
-  number: number;
+  name: {
+    firstname: string;
+    lastname: string;
+  };
+  password: string;
+  phone: string;
 }
