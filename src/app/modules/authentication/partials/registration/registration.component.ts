@@ -26,8 +26,7 @@ export class RegistrationComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private route: Router,
-    private authenticationService: AuthenticationService,
-    private storageService: StorageService
+    private authenticationService: AuthenticationService
   ) {}
 
   registrationForm(): void {
