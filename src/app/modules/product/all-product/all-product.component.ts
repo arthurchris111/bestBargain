@@ -1,6 +1,5 @@
 import { AllProductService } from './../../authentication/service/all-product.service';
 import { Component, OnInit } from '@angular/core';
-// import { AllProductService } from '../../authentication/service/all-product.service';
 
 @Component({
   selector: 'app-all-product',
