@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { AuthenticationComponent } from './authentication.component';
-// import { AppModule } from "../../app.module";
 
 @NgModule({
   declarations: [AuthenticationComponent],
