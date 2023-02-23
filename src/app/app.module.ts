@@ -8,12 +8,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './modules/authentication/partials/login/login.component';
 import { RegistrationComponent } from './modules/authentication/partials/registration/registration.component';
 import { ButtonComponent } from './component/button/button.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { NavbarComponent } from './layout/header/navbar/navbar.component';
+import { HeaderComponent } from './layouts/header/header.component';
+import { NavbarComponent } from './layouts/header/navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SocialsComponent } from './component/socials/socials.component';
-
+import { LayoutsComponent } from './layouts/layouts.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +23,7 @@ import { SocialsComponent } from './component/socials/socials.component';
     HeaderComponent,
     NavbarComponent,
     SocialsComponent,
+    LayoutsComponent,
   ],
   imports: [
     BrowserModule,
