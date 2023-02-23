@@ -1,11 +1,13 @@
 <div class="container">
-  <div class="row mt-4">
-    <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let display of displayAllProducts">
-      <div class="card border-0 mb-4 ">
-        <!-- <img hover class="" src="{{display.image}}" alt="image" width="100%"> -->
-        <!-- <h6 class="mt-2"> {{display.title}}</h6> -->
-        <!-- <h6>{{display.description}}</h6> -->
-        <!-- <h6>{{display.price}}</h6> -->
+  <div class="card border-0">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let display of displayAllProducts">
+        <img hover class="card-img-top" src="{{display.image}}" alt="image">
+        <div class="card-body text-lg-start">
+          <h5 class="card-title mb-0 fs-6">{{display.title | slice:0:40}}</h5>
+          <p class="card-text mt-0 mb-0">{{display.description | slice:0:60}}...</p>
+          <p class="card-text mt-0 fw-bolder">{{"$"}}{{display.price}}</p>
+        </div>
       </div>
     </div>
   </div>
