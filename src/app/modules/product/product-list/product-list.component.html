@@ -1,16 +1,72 @@
-<!-- <app-navbar></app-navbar> -->
-
-<div class="container-fluid m-0">
-  <div class="card border-0">
-    <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let display of displayAllProducts">
-        <img hover class="card-img-top" src="{{display.image}}" alt="image">
-        <div class="card-body text-lg-start">
-          <h5 class="card-title mb-0 fs-6">{{display.title | slice:0:40}}</h5>
-          <p class="card-text mt-0 mb-0">{{display.description | slice:0:60}}...</p>
-          <p class="card-text mt-0 fw-bolder">{{"$"}}{{display.price}}</p>
+<!-- <app-header></app-header> -->
+<!-- slider -->
+<div class="container-fluid p-0">
+  <div class="hero-image">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="../../../../assets/images/carosel-image1.png" class="d-block w-25 h-25" alt="image">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="../../../../assets/images/carosel-image2.png" class="d-block w-25 h-25" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
         </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="container bg-danger">
+  <div class="row">
+    <div class="card col-lg-3 col-md-6 col-sm-12 mb-3 p-2" *ngFor="let display of displayAllProducts">
+      <div class="text-center">
+        <img hover class="card-img-top" src="{{display.image}}" alt="image">
+      </div>
+      <div class="card-body text-lg-center">
+        <h5 class="card-title mb-0 fs-6 opacity-75">{{display.title}}</h5>
+        <!-- <p class="card-text mt-0 mb-0">{{display.description | slice:0:60}}...</p> -->
+        <!-- <p class="card-text mt-0 fw-bolder">{{"$"}}{{display.price}}</p> -->
+      </div>
+      <p class="card-text mt-0 fw-bolder">{{"$"}}{{display.price}}</p>
+
     </div>
   </div>
 </div>
+
+<!--
+<div class="container">
+  <div class="row ">
+    <ng-container *ngFor="let display of displayAllProducts">
+      <div class="card col-md-3">
+        <img hover class="card-img-top" src="{{display.image}}" alt="image">
+        <h5 class="card-title mb-0 fs-6">{{display.title | slice:0:40}}</h5>
+        <p class="card-text mt-0 mb-0">{{display.description | slice:0:60}}...</p>
+        <p class="card-text mt-0 fw-bolder">{{"$"}}{{display.price}}</p>
+        <div class="btn btn-dark">add cart</div>
+      </div>
+    </ng-container>
+  </div>
+</div> -->

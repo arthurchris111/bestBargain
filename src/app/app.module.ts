@@ -1,3 +1,4 @@
+import { BodyComponent } from './layouts/body/body.component';
 import { AuthenticationComponent } from './modules/authentication/authentication.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,22 +9,24 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './modules/authentication/partials/login/login.component';
 import { RegistrationComponent } from './modules/authentication/partials/registration/registration.component';
 import { ButtonComponent } from './component/button/button.component';
-import { HeaderComponent } from './layouts/header/header.component';
-import { NavbarComponent } from './layouts/header/navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SocialsComponent } from './component/socials/socials.component';
 import { LayoutsComponent } from './layouts/layouts.component';
+import { HeaderComponent } from './layouts/header/header.component';
+import { FooterComponent } from './layouts/footer/footer.component';
+// import { LayoutsModule } from './layouts/layouts.module';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistrationComponent,
     ButtonComponent,
-    HeaderComponent,
-    NavbarComponent,
     SocialsComponent,
     LayoutsComponent,
+    HeaderComponent,
+    FooterComponent,
+    BodyComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { LayoutsComponent } from './layouts/layouts.component';
     NgbModule,
     ReactiveFormsModule,
     HttpClientModule,
+    // LayoutsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

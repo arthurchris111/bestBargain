@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AllProductService } from '../../authentication/service/all-product.service';
+import { HeaderComponent } from 'src/app/layouts/header/header.component';
 
 @Component({
   selector: 'app-product-list',
