@@ -1,16 +1,15 @@
-<!-- <app-header></app-header> -->
 <!-- slider -->
 <div class="container-fluid m-0 p-0">
   <div class="hero-image">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
+      <!-- <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
           aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
           aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
           aria-label="Slide 3"></button>
-      </div>
+      </div> -->
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="../../../../assets/images/carosel-image1.png" class="d-block slider-image" alt="image">
@@ -75,10 +74,45 @@
   </div>
 </div>
 
+<!-- category -->
+<div class="container">
+  <div class="row bg-light p-3 d-flex justify-content-center">
+    <div class="col-sm-6 col-lg-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- products -->
-<div class="container mt-5 bg-light">
+<div class="container mt-5">
   <div class="row m-0 d-flex justify-content-center">
-    <div class="card col-lg-3 col-md-5 col-sm-6 p-2 mb-3 shadow-sm m-2" *ngFor="let display of displayAllProducts">
+    <div class="cards card col-lg-3 col-md-5 col-sm-6 p-2 mb-3 shadow-sm m-2"
+      *ngFor="let display of displayAllProducts">
       <div class="text-center">
         <img class="card-img-top" src="{{display.image}}" alt="image">
       </div>
@@ -92,18 +126,3 @@
     </div>
   </div>
 </div>
-
-<!--
-<div class="container">
-  <div class="row ">
-    <ng-container *ngFor="let display of displayAllProducts">
-      <div class="card col-md-3">
-        <img hover class="card-img-top" src="{{display.image}}" alt="image">
-        <h5 class="card-title mb-0 fs-6">{{display.title | slice:0:40}}</h5>
-        <p class="card-text mt-0 mb-0">{{display.description | slice:0:60}}...</p>
-        <p class="card-text mt-0 fw-bolder">{{"$"}}{{display.price}}</p>
-        <div class="btn btn-dark">add cart</div>
-      </div>
-    </ng-container>
-  </div>
-</div> -->

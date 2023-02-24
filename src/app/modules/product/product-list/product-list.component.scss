@@ -51,11 +51,11 @@ h4,p,h6,h5{
 }
 
 
-.card{
+.cards{
     transition: transform .2s;
     cursor: pointer;
 }
-.card:hover{
+.cards:hover{
     transform: scale(1.05);
 
 }
