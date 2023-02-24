@@ -15,6 +15,7 @@ import { SocialsComponent } from './component/socials/socials.component';
 import { LayoutsComponent } from './layouts/layouts.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
+import { HoverDirective } from './core/directives/hover.directive';
 // import { LayoutsModule } from './layouts/layouts.module';
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FooterComponent } from './layouts/footer/footer.component';
     HeaderComponent,
     FooterComponent,
     BodyComponent,
+    HoverDirective,
   ],
   imports: [
     BrowserModule,

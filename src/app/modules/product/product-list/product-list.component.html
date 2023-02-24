@@ -3,23 +3,20 @@
 <div class="container-fluid m-0 p-0">
   <div class="hero-image">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <!-- <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-      </div> -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="../../../../assets/images/carosel-image1.png" class="d-block slider-image" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class="fs-3 text-dark">Best Selling!</h5>
-            <p class="fs-1 fw-bolder text-dark">Shop More, Get More.</p>
-            <div class="btn">
-              <button type="button" class="btn btn-primary btn-lg">Small button</button>
-              <button type="button" class="btn btn-secondary btn-lg">Small button</button>
+          <img src="../../../../assets/images/carosel-image1.png" class="d-block slider-image" alt="image">
+          <div class="carousel-caption d-none d-md-block text-start">
+            <h5 class="fs-3 text-dark tracking-in-expand">Best Selling!</h5>
+            <p class="fs-1 fw-bolder text-dark tracking-in-expand">Shop More, Get More.</p>
+            <p class="fs-6 text-dark opacity-75 ">Lorem ipsum is placeholder text commonly
+              used in the graphic, print,
+              and publishing industries for previewing layouts and visual mockups.</p>
+            <div class="">
+              <button type="button"
+                class="btn btn-primary btn-md me-2 bg-transparent border-dark text-dark rounded-0">SHOP
+                NOW</button>
+              <button type="button" class="btn btn-dark btn-md rounded-0">DISCOVERY</button>
             </div>
           </div>
         </div>
@@ -49,18 +46,15 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-
-
   </div>
-
 </div>
 
 
-<div class="container bg-danger">
-  <div class="row">
-    <div class="card col-lg-3 col-md-6 col-sm-12 mb-3 p-2" *ngFor="let display of displayAllProducts">
+<div class="container">
+  <div class="row mt-4">
+    <div class="card col-lg-3 col-md-6 col-sm-12 mb-3 p-2 shadow-sm" *ngFor="let display of displayAllProducts">
       <div class="text-center">
-        <img hover class="card-img-top" src="{{display.image}}" alt="image">
+        <img class="card-img-top" src="{{display.image}}" alt="image">
       </div>
       <div class="card-body text-lg-center">
         <h5 class="card-title mb-0 fs-6 opacity-75">{{display.title}}</h5>
