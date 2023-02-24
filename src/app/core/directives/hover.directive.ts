@@ -1,10 +1,32 @@
 import { Directive } from '@angular/core';
-
+import { Renderer2 } from '@angular/core';
+import { ElementRef } from '@angular/core';
+import { HostListener } from '@angular/core';
 @Directive({
-  selector: '[appHover]'
+  selector: '[appHover]',
 })
 export class HoverDirective {
+  constructor(private element: ElementRef, private renderer: Renderer2) {}
 
-  constructor() { }
+  @HostListener('mouseenter') onmouseover() {
+    this.renderer.setStyle(
+      this.element.nativeElement,
+      'transform',
+      'scale(1.1)'
+    );
+    this.renderer.setStyle(
+      this.element.nativeElement,
+      'transition',
+      'transform 0.2s'
+    );
+  }
 
+  @HostListener('mouseleave') onmouseout() {
+    this.renderer.setStyle(this.element.nativeElement, 'transform', 'scale(1)');
+    this.renderer.setStyle(
+      this.element.nativeElement,
+      'transition',
+      'transform 0.2s'
+    );
+  }
 }

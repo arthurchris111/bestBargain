@@ -1,6 +1,6 @@
 .card-img-top{
-  height: 140px!important;
-  width: 130px!important;
+  height: 110px!important;
+  width: 110px!important;
 }
 .hero-image{
   background-color: rgb(248, 221, 229)!important;
@@ -24,7 +24,6 @@ h4,p,h6,h5{
 	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
-
 
 @-webkit-keyframes tracking-in-expand {
   0% {
@@ -51,3 +50,12 @@ h4,p,h6,h5{
   }
 }
 
+
+.card{
+    transition: transform .2s;
+    cursor: pointer;
+}
+.card:hover{
+    transform: scale(1.03);
+
+}
