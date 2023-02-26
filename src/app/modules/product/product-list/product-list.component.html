@@ -69,38 +69,53 @@
 <!-- category -->
 <div class="container mt-5">
   <div class="row p-3">
-    <div class="col-sm-6 col-lg-4 ">
+    <div class="col-sm-6 col-lg-3 ">
       <div class="card bg-light border-0 rounded-0 shadow-sm">
         <a class="text-decoration-none text-dark" href="/">
           <div class=" d-flex justify-content-center">
             <img src="../../../../assets/images/mens-wear.png" class="w-75 h-75" alt="image">
           </div>
           <div class="card-body text-center mens-wear">
-            <h5 class="card-title fw-bolder bg-white p-2 mens-wear ">MEN'S FASHION</h5>
+            <h5 class="card-title fw-bolder fs-6 bg-white p-2 mens-wear ">MEN'S FASHION</h5>
           </div>
         </a>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 ">
+
+    <div class="col-sm-6 col-lg-3 ">
       <div class="card bg-light border-0 rounded-0 shadow-sm">
         <a class="text-decoration-none text-dark" href="/">
           <div class=" d-flex justify-content-center">
             <img src="../../../../assets/images/women-wear.png" class="w-75 h-75" alt="image">
           </div>
           <div class="card-body text-center">
-            <h5 class="card-title fw-bolder bg-white p-2">WOMEN'S FASHION</h5>
+            <h5 class="card-title fw-bolder fs-6 bg-white p-2">WOMEN'S FASHION</h5>
           </div>
         </a>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4">
+
+    <div class="col-sm-6 col-lg-3 ">
       <div class="card bg-light border-0 rounded-0 shadow-sm">
         <a class="text-decoration-none text-dark" href="/">
           <div class=" d-flex justify-content-center">
-            <img src="../../../../assets/images/bag.png" class="w-75 h-75" alt="image">
+            <img src="../../../../assets/images/electronics.png" class="w-75 h-75" alt="image">
           </div>
           <div class="card-body text-center">
-            <h5 class="card-title fw-bolder bg-white p-2">ACCESSORIES</h5>
+            <h5 class="card-title fw-bolder fs-6 bg-white p-2">ELECTRONICS</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-3">
+      <div class="card bg-light border-0 rounded-0 shadow-sm">
+        <a class="text-decoration-none text-dark" href="/">
+          <div class=" d-flex justify-content-center">
+            <img src="../../../../assets/images/jewellery2.png" class="w-75 h-75 jewellery" alt="image">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bolder fs-6 bg-white p-2">JEWELRY</h5>
           </div>
         </a>
       </div>
@@ -120,9 +135,10 @@
         <div class="card-body text-lg-center">
           <h5 class="card-title mb-0 fs-6 opacity-75">{{display.title}}</h5>
           <!-- <p class="card-text mt-0 mb-0">{{display.description | slice:0:60}}...</p> -->
-          <!-- <p class="card-text mt-0 fw-bolder">{{"$"}}{{display.price}}</p> -->
+          <p class="card-text mt-0 mb-0 text-success">{{display.category}}</p>
+
         </div>
-        <p class="card-text mt-0 fw-bolder text-success">{{"$"}}{{display.price}}</p>
+        <span class="card-text mt-0 text-success fw-bold">{{"$"}}{{display.price}}</span>
       </div>
     </div>
   </div>
