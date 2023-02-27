@@ -131,22 +131,27 @@
         <div class="text-center">
           <img class="card-img-top image" src="{{display.image}}" alt="image">
           <div class="middle">
-            <div class="overlay mb-5 d-flex slide-in-bottom">
-              <img src="../../../../assets/images/shopping.png" class="overlay-item p-1 bg-white m-1 slide-in-bottom"
-                alt="image">
-              <img src="../../../../assets/images/zoom.png" class="overlay-item p-1 bg-white m-1" alt="image">
-              <!-- <img src="../../../../assets/images/" class="overlay-item p-1 bg-white m-1" alt="image"> -->
+            <div class="overlay mb-5 d-flex">
+              <a href="/">
+                <span class="material-symbols-outlined ">
+                  shopping_cart
+                </span>
+              </a>
+              <a href="/">
+                <span class="material-symbols-outlined">
+                  zoom_in
+                </span>
+              </a>
             </div>
           </div>
         </div>
         <div class="card-body text-lg-center">
           <h5 class="card-title mb-0 fs-6 opacity-75">{{display.title}}</h5>
-          <!-- <p class="card-text mt-0 mb-0">{{display.description | slice:0:60}}...</p> -->
-          <!-- <p class="card-text mt-0 mb-0 text-success">{{display.category}}</p> -->
         </div>
         <span class="card-text mt-0 text-success fw-bold">{{"$"}}{{display.price}}</span>
       </div>
     </div>
+
   </div>
 </div>
 
