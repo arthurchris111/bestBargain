@@ -16,4 +16,9 @@ export class AllProductService {
   allProduct(): Observable<any> {
     return this.httpClient.get(this.endpoint.ALL_PRODUCT_ENDPOINT);
   }
+
+  // single product
+  singleProduct(): Observable<any> {
+    return this.httpClient.get(this.endpoint.SINGLE_PRODUCT_ENDPOINT);
+  }
 }
