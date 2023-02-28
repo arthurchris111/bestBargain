@@ -17,6 +17,7 @@ export class ProductComponent implements OnInit {
   singleProduct() {
     this.service.singleProduct().subscribe((result) => {
       console.log(result);
+
       this.displaySingleProduct = result;
     });
   }
