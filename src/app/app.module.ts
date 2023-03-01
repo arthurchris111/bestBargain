@@ -1,4 +1,3 @@
-import { BodyComponent } from './layouts/body/body.component';
 import { AuthenticationComponent } from './modules/authentication/authentication.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,6 +15,8 @@ import { LayoutsComponent } from './layouts/layouts.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { HoverDirective } from './core/directives/hover.directive';
+// import { ProductComponent } from './modules/product/product.component';
+// import { AllCartComponent } from './modules/product/product-cart/all-cart/all-cart.component';
 // import { LayoutsModule } from './layouts/layouts.module';
 @NgModule({
   declarations: [
@@ -25,10 +26,10 @@ import { HoverDirective } from './core/directives/hover.directive';
     ButtonComponent,
     SocialsComponent,
     LayoutsComponent,
-    HeaderComponent,
     FooterComponent,
-    BodyComponent,
     HoverDirective,
+    // ProductComponent,
+    // AllCartComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,6 @@ import { HoverDirective } from './core/directives/hover.directive';
     NgbModule,
     ReactiveFormsModule,
     HttpClientModule,
-    // LayoutsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
