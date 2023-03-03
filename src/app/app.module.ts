@@ -12,8 +12,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SocialsComponent } from './component/socials/socials.component';
 import { LayoutsComponent } from './layouts/layouts.component';
-import { HeaderComponent } from './layouts/header/header.component';
-import { FooterComponent } from './layouts/footer/footer.component';
+// import { HeaderComponent } from './layouts/header/header.component';
+// import { FooterComponent } from './layouts/footer/footer.component';
 import { HoverDirective } from './core/directives/hover.directive';
 // import { ProductComponent } from './modules/product/product.component';
 // import { AllCartComponent } from './modules/product/product-cart/all-cart/all-cart.component';
@@ -26,7 +26,7 @@ import { HoverDirective } from './core/directives/hover.directive';
     ButtonComponent,
     SocialsComponent,
     LayoutsComponent,
-    FooterComponent,
+    // FooterComponent,
     HoverDirective,
     // ProductComponent,
     // AllCartComponent,
