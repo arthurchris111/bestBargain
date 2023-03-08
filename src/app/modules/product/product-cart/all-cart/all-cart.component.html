@@ -1,10 +1,6 @@
-<!-- <p>all-cart works!</p> -->
-<!-- <app-header></app-header> -->
-
-
-
-<!-- <div *ngIf="true"> -->
-<!-- <div class="container">
+<app-header></app-header>
+<div *ngIf="false">
+  <!-- <div class="container">
   <div class="row">
     <div class="col-lg-8">
       <div class="d-flex shadow-sm">
@@ -28,27 +24,22 @@
         </div>
       </div>
     </div>
-  </div>
-</div> -->
+  </div> -->
+</div>
 
 <!-- </div> -->
 
 
-<!-- <div *ngIf="false"> -->
-<div class="container-fluid m-0 p-0">
-  <div class="text bg-light p-5 text-center">
-    <h6 class="fw-bolder fs-3">SHOPPING CART</h6>
-  </div>
-  <div class=" d-flex justify-content-center">
+<div *ngIf="true">
+  <div class="container-fluid m-0 p-0 d-flex justify-content-center align-items-center vh-100">
     <div class="m-0 p-0">
       <div class="cart text-center">
         <img src="../../../../../assets/images/shopping_cart_shopping.png" alt="image" class="w-50 h-50">
       </div>
       <div class="card-body text-center">
         <h4 class="fw-bolder">Shopping Cart Is Empty!</h4>
-        <button class="btn btn-primary shadow-none" type="button">Shop Now</button>
+        <a class="btn btn-primary shadow-none" type="button" [routerLink]="">Shop Now</a>
       </div>
     </div>
   </div>
 </div>
-<!-- </div> -->
