@@ -1,5 +1,6 @@
 import { ProductService } from './../../service/product.service';
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-all-cart',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./all-cart.component.scss'],
 })
 export class AllCartComponent implements OnInit {
-  displayCarts = [];
+  displayCarts: any = [];
+  public productList = new BehaviorSubject<any>([]);
+  public cartItems: any = [];
 
   constructor(private services: ProductService) {}
 
@@ -19,5 +22,11 @@ export class AllCartComponent implements OnInit {
     this.services.carts().subscribe((result) => {
       this.displayCarts = result;
     });
+  }
+
+  //add to cart
+  addToCart(product: any) {
+    this.cartItems.push(product);
+    this.productList.next(this.cartItems);
   }
 }

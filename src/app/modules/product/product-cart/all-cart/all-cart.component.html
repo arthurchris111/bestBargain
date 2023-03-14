@@ -1,36 +1,25 @@
-<app-header></app-header>
-<div *ngIf="false">
-  <!-- <div class="container">
+<!-- <app-header></app-header> -->
+<!-- <div *ngIf="false"> -->
+<div class="container">
   <div class="row">
     <div class="col-lg-8">
-      <div class="d-flex shadow-sm">
+      <div class="d-flex shadow-sm" *ngFor="let item of displayCarts">
         <div class="flex-shrink-0">
-          <img src="..." alt="...">
+          <img class="card-img-top image" src="{{item.image}}" alt="image">
         </div>
         <div class="flex-grow-1 ms-3">
-          This is some content from a media component. You can replace this with any content and adjust it as needed.
+          <h5 class="card-title mb-0 fs-6 opacity-75">{{item.title}}</h5>
+          <span class="card-text mt-0 text-success fw-bold">{{"$"}}{{item.price}}</span>
         </div>
       </div>
     </div>
-    <div class="col-lg-4">
-      <div class="card rounded-0 border-0 shadow-sm">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item fw-bolder">CART SUMMARY</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
-        <div class="card-footer">
-          Card footer
-        </div>
-      </div>
-    </div>
-  </div> -->
+  </div>
 </div>
 
 <!-- </div> -->
 
 
-<div *ngIf="true">
+<!-- <div *ngIf="true">
   <div class="container-fluid m-0 p-0 d-flex justify-content-center align-items-center vh-100">
     <div class="m-0 p-0">
       <div class="cart text-center">
@@ -42,4 +31,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

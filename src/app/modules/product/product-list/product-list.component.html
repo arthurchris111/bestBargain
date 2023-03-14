@@ -128,17 +128,17 @@
   <div class="container">
     <div class="row m-0 d-flex justify-content-center">
       <div id="overlay" class="item-container card border-0 col-lg-3 col-md-5 col-sm-5 p-sm-3 p-2 mb-3 shadow-sm m-2"
-        *ngFor="let display of displayAllProducts">
+        *ngFor="let item of displayAllProducts">
         <div class="text-center">
-          <img class="card-img-top image" src="{{display.image}}" alt="image">
+          <img class="card-img-top image" src="{{item.image}}" alt="image">
           <div class="middle">
             <div class="overlay mb-5 d-flex">
-              <a href="/">
+              <a class="btn p-0" (click)=addToCart(item)>
                 <span class="material-symbols-outlined ">
                   shopping_cart
                 </span>
               </a>
-              <a href="/">
+              <a class="btn p-0">
                 <span class="material-symbols-outlined">
                   zoom_in
                 </span>
@@ -147,9 +147,9 @@
           </div>
         </div>
         <div class="card-body text-lg-center">
-          <h5 class="card-title mb-0 fs-6 opacity-75">{{display.title}}</h5>
+          <h5 class="card-title mb-0 fs-6 opacity-75">{{item.title}}</h5>
         </div>
-        <span class="card-text mt-0 text-success fw-bold">{{"$"}}{{display.price}}</span>
+        <span class="card-text mt-0 text-success fw-bold">{{"$"}}{{item.price}}</span>
       </div>
     </div>
 
