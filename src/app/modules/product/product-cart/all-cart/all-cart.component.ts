@@ -24,7 +24,10 @@ export class AllCartComponent implements OnInit {
     });
   }
 
-  //add to cart
+  getProducts(): any {
+    this.productList.asObservable();
+  }
+
   addToCart(product: any) {
     this.cartItems.push(product);
     this.productList.next(this.cartItems);

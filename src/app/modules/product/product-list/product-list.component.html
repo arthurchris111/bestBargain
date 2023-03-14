@@ -133,12 +133,12 @@
           <img class="card-img-top image" src="{{item.image}}" alt="image">
           <div class="middle">
             <div class="overlay mb-5 d-flex">
-              <a class="btn p-0" (click)=addToCart(item)>
+              <a class="btn p-0">
                 <span class="material-symbols-outlined ">
                   shopping_cart
                 </span>
               </a>
-              <a class="btn p-0">
+              <a class="btn p-0" (click)="addToCart(item)">
                 <span class="material-symbols-outlined">
                   zoom_in
                 </span>
