@@ -13,8 +13,8 @@ export class HeaderComponent implements OnInit {
   constructor(private services: AllCartService) {}
 
   ngOnInit(): void {
-    // this.services.getProducts().subscribe((res: any) => {
-    //   this.totalItem = res.length;
-    // });
+    this.services.getProducts().subscribe((res: any) => {
+      this.totalItem = res.length;
+    });
   }
 }

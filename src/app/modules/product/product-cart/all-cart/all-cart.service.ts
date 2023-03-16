@@ -15,4 +15,14 @@ export class AllCartService {
     this.cartItems.push(product);
     this.productList.next(this.cartItems);
   }
+
+  getProducts() {
+    return this.productList.asObservable();
+  }
+
+  //clear cart
+  // clearCart() {
+  //   this.cartItems = [];
+  //   return this.cartItems;
+  // }
 }
