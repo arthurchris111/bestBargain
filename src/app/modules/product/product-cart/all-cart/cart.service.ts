@@ -10,19 +10,30 @@ export class AllCartService {
 
   constructor() {}
 
-  //add to cart
-  addToCart(product: any) {
-    this.cartItems.push(product);
-    this.productList.next(this.cartItems);
-  }
-
   getProducts() {
     return this.productList.asObservable();
   }
 
-  //clear cart
-  // clearCart() {
-  //   this.cartItems = [];
-  //   return this.cartItems;
-  // }
+  //add to cart
+  addToCart(product: any) {
+    this.cartItems.push(product);
+    this.productList.next(this.cartItems);
+    this.getProducts();
+  }
+
+  // clear cart
+  clearCart() {
+    this.cartItems = [];
+    return this.cartItems;
+  }
+
+  //get total price
+  getTotalPrice(): number {
+    let totalPrice = 0;
+    this.cartItems.map((a: any) => {
+      totalPrice += a.total;
+      console.log(totalPrice);
+    });
+    return totalPrice;
+  }
 }

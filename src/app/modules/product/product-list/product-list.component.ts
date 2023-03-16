@@ -1,4 +1,4 @@
-import { AllCartService } from './../product-cart/all-cart/all-cart.service';
+import { AllCartService } from '../product-cart/all-cart/cart.service';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../service/product.service';
 
@@ -23,6 +23,7 @@ export class ProductListComponent implements OnInit {
     });
   }
 
+  //adding item to cart
   addToCart(item: any) {
     this.cart.addToCart(item);
     console.log(item);

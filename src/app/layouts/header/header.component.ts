@@ -1,4 +1,4 @@
-import { AllCartService } from './../../modules/product/product-cart/all-cart/all-cart.service';
+import { AllCartService } from '../../modules/product/product-cart/all-cart/cart.service';
 import { Component, OnInit } from '@angular/core';
 import { MenuItems } from './models/header.data';
 @Component({
