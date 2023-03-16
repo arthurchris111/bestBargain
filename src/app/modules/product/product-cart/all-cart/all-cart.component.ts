@@ -15,21 +15,12 @@ export class AllCartComponent implements OnInit {
   constructor(private services: ProductService) {}
 
   ngOnInit(): void {
-    this.displayAllCarts();
+    // this.displayAllCarts();
   }
 
-  displayAllCarts() {
-    this.services.carts().subscribe((result) => {
-      this.displayCarts = result;
-    });
-  }
-
-  getProducts(): any {
-    this.productList.asObservable();
-  }
-
-  addToCart(product: any) {
-    this.cartItems.push(product);
-    this.productList.next(this.cartItems);
-  }
+  // displayAllCarts() {
+  //   this.services.carts().subscribe((result) => {
+  //     this.displayCarts = result;
+  //   });
+  // }
 }

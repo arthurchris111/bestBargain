@@ -7,4 +7,5 @@ export class Endpoint {
   ALL_PRODUCT_ENDPOINT = this.baseEndpoint + 'products';
   SINGLE_PRODUCT_ENDPOINT = this.baseEndpoint + 'products/1';
   CARTS_ENDPOINT = this.baseEndpoint + 'carts';
+  ALL_CATEGORIES_ENDPOINT = this.baseEndpoint + 'categories';
 }
