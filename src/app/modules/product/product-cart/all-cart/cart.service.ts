@@ -19,6 +19,7 @@ export class AllCartService {
     this.cartItems.push(product);
     this.productList.next(this.cartItems);
     this.getProducts();
+    console.log(this.cartItems);
   }
 
   // clear cart
