@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit {
   allProductsDisplay() {
     this.services.allProduct().subscribe((result) => {
       // console.log(result);
-      this.displayAllProducts = result;
+      this.displayAllProducts = result['products'];
     });
   }
 
