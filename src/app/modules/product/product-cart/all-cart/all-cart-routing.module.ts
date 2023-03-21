@@ -6,6 +6,6 @@ const routes: Routes = [{ path: '', component: AllCartComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AllCartRoutingModule { }
+export class AllCartRoutingModule {}
