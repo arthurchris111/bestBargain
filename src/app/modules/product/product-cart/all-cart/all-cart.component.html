@@ -1,15 +1,21 @@
-<!-- <app-header></app-header> -->
+<app-header></app-header>
 <div *ngIf="products.length !=0">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="d-flex shadow-sm" *ngFor="let item of products; let i = index">
-          <div class="flex-shrink-0">
-            <img class="card-img-top image" src="{{item.images[0]}}" alt="image">
-          </div>
-          <div class="flex-grow-1 ms-3">
-            <h5 class="card-title mb-0 fs-6 opacity-75">{{item.title}}</h5>
-            <span class="card-text mt-0 text-success fw-bold">{{"$"}}{{item.price}}</span>
+  <div class="container-fluid bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="d-flex shadow-sm my-4 p-5 bg-white" *ngFor="let item of products; let i = index">
+            <div class="flex-shrink-0">
+              <img class="card-img-top image" src="{{item.images[0]}}" alt="image">
+            </div>
+            <div class="flex-grow-1 ms-3">
+              <h5 class="card-title mb-0 fs-6 opacity-75">{{item.title}}</h5>
+              <h5 class="card-title mb-0 fs-6 opacity-75 text-start">{{item.description}}</h5>
+              <span class="card-text mt-0 text-success fw-bold">{{"$"}}{{item.price}}</span>
+            </div>
+            <div class="row">
+              <h1>ppp</h1>
+            </div>
           </div>
         </div>
       </div>
@@ -19,7 +25,7 @@
 
 
 <div *ngIf="products.length ===0">
-  <div class="container-fluid m-0 p-0 d-flex justify-content-center align-items-center vh-100">
+  <div class="container-fluid m-0 p-0 d-flex justify-content-center align-items-center ">
     <div class="m-0 p-0">
       <div class="cart text-center">
         <img src="../../../../../assets/images/shopping_cart_shopping.png" alt="image" class="w-50 h-50">
