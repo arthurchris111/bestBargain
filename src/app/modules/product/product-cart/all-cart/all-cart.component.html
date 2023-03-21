@@ -1,11 +1,11 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <div *ngIf="products.length !=0">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
-        <div class="d-flex shadow-sm" *ngFor="let item of displayCarts">
+        <div class="d-flex shadow-sm" *ngFor="let item of products; let i = index">
           <div class="flex-shrink-0">
-            <img class="card-img-top image" src="{{item.images}}" alt="image">
+            <img class="card-img-top image" src="{{item.images[0]}}" alt="image">
           </div>
           <div class="flex-grow-1 ms-3">
             <h5 class="card-title mb-0 fs-6 opacity-75">{{item.title}}</h5>

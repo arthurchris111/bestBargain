@@ -1,7 +1,6 @@
-import { ProductService } from './../../service/product.service';
+import { AllCartService } from './cart.service';
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { ProductListComponent } from '../../product-list/product-list.component';
 
 @Component({
   selector: 'app-all-cart',
@@ -13,16 +12,20 @@ export class AllCartComponent implements OnInit {
   displayCarts: any = [];
   public productList = new BehaviorSubject<any>([]);
   public cartItems: any = [];
+  public grandTotal!: number;
 
-  constructor(private services: ProductService) {}
+  constructor(private service: AllCartService) {}
 
   ngOnInit(): void {
-    // this.displayAllCarts();
-  }
-
-  displayAllCarts() {
-    this.services.carts().subscribe((result) => {
-      this.displayCarts = result;
+    this.service.getProducts().subscribe((result) => {
+      this.products = result;
+      this.grandTotal = this.service.getTotalPrice();
     });
   }
+
+  // displayAllCarts() {
+  //   this.services.carts().subscribe((result) => {
+  //     this.displayCarts = result;
+  //   });
+  // }
 }
