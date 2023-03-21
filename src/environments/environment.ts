@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  baseEndpoint: 'https://fakestoreapi.com/',
+  // baseEndpoint: 'https://fakestoreapi.com/',
+  baseEndpoint: 'https://dummyjson.com/',
+
   production: false,
 };
 

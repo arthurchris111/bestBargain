@@ -37,10 +37,6 @@ export class LoginComponent implements OnInit {
     this.loginForm();
   }
 
-  // get formControl(): any {
-  //   return this.signUp.controls;
-  // }
-
   // toggle password
   togglePassword() {
     this.show = !this.show;
