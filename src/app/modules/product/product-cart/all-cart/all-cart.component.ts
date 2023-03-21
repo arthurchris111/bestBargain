@@ -32,10 +32,4 @@ export class AllCartComponent implements OnInit {
   removeFromCart(item: any) {
     this.service.removeCartItem(item);
   }
-
-  // displayAllCarts() {
-  //   this.services.carts().subscribe((result) => {
-  //     this.displayCarts = result;
-  //   });
-  // }
 }
