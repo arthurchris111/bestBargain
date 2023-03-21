@@ -13,8 +13,9 @@
               <h5 class="card-title mb-0 fs-6 opacity-75 text-start">{{item.description}}</h5>
               <span class="card-text mt-0 text-success fw-bold">{{"$"}}{{item.price}}</span>
             </div>
-            <div class="row">
-              <h1>ppp</h1>
+            <div class="d-flex justify-content-end align-items-end ">
+              <button (click)="removeFromCart(item)" type="button" class="btn btn-danger btn-sm">Remove</button>
+
             </div>
           </div>
         </div>

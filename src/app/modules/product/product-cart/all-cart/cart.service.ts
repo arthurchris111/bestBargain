@@ -22,10 +22,14 @@ export class AllCartService {
     console.log(this.cartItems);
   }
 
-  // clear cart
-  clearCart() {
-    this.cartItems = [];
-    return this.cartItems;
+  //remove cart item
+  removeCartItem(product: any) {
+    this.cartItems.map((a: any, index: any) => {
+      if (product.id === a.id) {
+        this.cartItems.splice(index, 1);
+      }
+    });
+    this.productList.next(this.cartItems);
   }
 
   //get total price

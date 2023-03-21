@@ -17,10 +17,20 @@ export class AllCartComponent implements OnInit {
   constructor(private service: AllCartService) {}
 
   ngOnInit(): void {
+    this.addToCart();
+  }
+
+  //add to cart
+  addToCart() {
     this.service.getProducts().subscribe((result) => {
       this.products = result;
       this.grandTotal = this.service.getTotalPrice();
     });
+  }
+
+  //remove item
+  removeFromCart(item: any) {
+    this.service.removeCartItem(item);
   }
 
   // displayAllCarts() {
