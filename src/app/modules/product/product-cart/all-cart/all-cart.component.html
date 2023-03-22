@@ -3,8 +3,27 @@
   <div class="container-fluid bg-light">
     <div class="container bg-light">
       <div class="row">
-        <div class="col-lg-8">
-          <div class="d-flex shadow-sm my-4 p-5 bg-white" *ngFor="let item of products; let i = index">
+        <div class="col-lg-7 p-3">
+          <!-- return to shop -->
+          <div class="d-flex justify-content-between">
+            <a class="btn d-flex returnToProducts border-0 shadow-none" type="button" [routerLink]="['/product/list']"
+              routerLinkActive="router-link-active">
+              <span class="material-symbols-outlined">
+                keyboard_backspace
+              </span>
+              <span>Continue Shopping</span>
+            </a>
+            <a class="btn d-flex emptyCart border-0 shadow-none" type="button" [routerLink]="['/product/list']"
+              routerLinkActive="router-link-active">
+              <span class="material-symbols-outlined ">
+                delete
+              </span>
+              <span>Empty Shopping Cart</span>
+            </a>
+
+          </div>
+
+          <div class="d-flex shadow-sm mb-3 p-5 bg-white" *ngFor="let item of products; let i = index">
             <div class="flex-shrink-0">
               <img class="card-img-top image" src="{{item.images[0]}}" alt="image">
             </div>
@@ -13,7 +32,7 @@
               <h5 class="card-title mb-0 fs-6 opacity-75 text-start">{{item.description}}</h5>
               <span class="card-text mt-0 text-success fw-bold">{{"$"}}{{item.price}}</span>
             </div>
-            <div class="d-flex justify-content-end align-items-start border-0">
+            <!-- <div class="d-flex justify-content-end align-items-start border-0">
               <button type="button" class="btn btn-primary btn-sm me-2 p-0 decrease">
                 <span class="material-symbols-outlined">
                   remove
@@ -27,7 +46,7 @@
                   add
                 </span>
               </button>
-            </div>
+            </div> -->
             <div class="d-flex justify-content-end align-items-end border-0">
               <span (click)="removeFromCart(item)" type="button" class="icons border-0"><span
                   class="material-symbols-outlined">
@@ -35,6 +54,39 @@
                 </span>
               </span>
             </div>
+          </div>
+        </div>
+        <div class="col-lg-5 p-5">
+          <div class="card border-0 p-2 shadow-sm">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">CART SUMMARY</th>
+                  <th scope="col">QUANTITY</th>
+                  <th scope="col">PRICE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <!-- <th scope="row"></th> -->
+                  <td>Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+
+
+
           </div>
         </div>
       </div>

@@ -8,14 +8,22 @@ h4,p,h6,h5{
 }
 
 .icons{
-  color: rgb(0, 0, 0)!important;
+  color: rgb(248, 8, 8)!important;
 }
 
 .icons:hover{
   color: red!important;
 }
 
-.quantity{
-  width: 35px;
-  // height: 40px;
+// .quantity{
+//   width: 35px;
+//   height: 40px;
+// }
+
+.returnToProducts{
+  color: green!important;
+}
+
+.emptyCart{
+  color: red!important;
 }
