@@ -9,10 +9,10 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class AllCartComponent implements OnInit {
   public products: any = [];
-  displayCarts: any = [];
+  // displayCarts: any = [];
   public productList = new BehaviorSubject<any>([]);
   public cartItems: any = [];
-  public grandTotal!: number;
+  // public grandTotal!: number;
 
   constructor(private service: AllCartService) {}
 
