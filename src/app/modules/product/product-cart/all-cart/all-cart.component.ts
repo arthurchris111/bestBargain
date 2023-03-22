@@ -32,4 +32,9 @@ export class AllCartComponent implements OnInit {
   removeFromCart(item: any) {
     this.service.removeCartItem(item);
   }
+
+  //remove all items
+  emptyCart() {
+    this.service.removeAllCart();
+  }
 }

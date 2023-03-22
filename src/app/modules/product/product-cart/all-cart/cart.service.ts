@@ -41,4 +41,10 @@ export class AllCartService {
     });
     return totalPrice;
   }
+
+  //remove all cart items
+  removeAllCart() {
+    this.cartItems = [];
+    this.productList.next(this.cartItems);
+  }
 }

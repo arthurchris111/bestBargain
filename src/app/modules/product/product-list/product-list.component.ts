@@ -9,6 +9,7 @@ import { ProductService } from '../service/product.service';
 })
 export class ProductListComponent implements OnInit {
   displayAllProducts: any = [];
+  displayAllCategories: any = [];
 
   constructor(private services: ProductService, private cart: AllCartService) {}
 
@@ -27,5 +28,12 @@ export class ProductListComponent implements OnInit {
   addToCart(item: any) {
     this.cart.addToCart(item);
     console.log(item);
+  }
+
+  //categories
+  allCategoryDisplay() {
+    this.services.allCategories().subscribe((result) => {
+      this.displayAllCategories = result;
+    });
   }
 }
