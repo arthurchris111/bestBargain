@@ -133,12 +133,14 @@
           <img class="card-img-top image" src="{{item.images[0]}}" alt="image">
           <div class="middle">
             <div class="overlay mb-5 d-flex">
+              <!-- route to shopping cart -->
               <a class="btn p-0" (click)="addToCart(item)">
                 <span class="material-symbols-outlined ">
                   shopping_cart
                 </span>
               </a>
-              <a class="btn p-0 " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <!-- Button trigger modal -->
+              <a class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <span class="material-symbols-outlined">
                   zoom_in
                 </span>
@@ -146,11 +148,31 @@
             </div>
           </div>
         </div>
+
         <div class="card-body text-lg-center">
         </div>
         <h5 class="card-title mb-0 fs-6 opacity-75 text-start">{{item.title}}</h5>
         <span class="card-text mt-0 text-success fw-bold">{{"$"}}{{item.price}}</span>
       </div>
+    </div>
+  </div>
+</div>
+
+<!--item Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
     </div>
   </div>
 </div>
