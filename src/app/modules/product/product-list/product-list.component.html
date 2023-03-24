@@ -133,22 +133,24 @@
           <img class="card-img-top image" src="{{item.images[0]}}" alt="image">
           <div class="middle">
             <div class="overlay mb-5 d-flex">
+
               <!-- route to shopping cart -->
               <a class="btn p-0" (click)="addToCart(item)">
                 <span class="material-symbols-outlined ">
                   shopping_cart
                 </span>
               </a>
+
               <!-- Button trigger modal -->
-              <a class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <a class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="viewSingleItem(item)">
                 <span class="material-symbols-outlined">
                   zoom_in
                 </span>
               </a>
+
             </div>
           </div>
         </div>
-
         <div class="card-body text-lg-center">
         </div>
         <h5 class="card-title mb-0 fs-6 opacity-75 text-start">{{item.title}}</h5>
@@ -163,16 +165,22 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="exampleModalLabel">Product</h5>
+        <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <p>ssssssssss</p>
+        <!-- <div class="d-flex shadow-sm mb-3 p-5 bg-white" *ngFor="let item of products; let i = index">
+          <div class="flex-shrink-0">
+            <img class="card-img-top image" src="{{item.images[0]}}" alt="image">
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <h5 class="card-title mb-0 fs-6 opacity-75">{{item.title}}</h5>
+            <h5 class="card-title mb-0 fs-6 opacity-75 text-start">{{item.description}}</h5>
+            <span class="card-text mt-0 text-success fw-bold">{{"$"}}{{item.price}}</span>
+          </div>
+        </div> -->
       </div>
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div> -->
     </div>
   </div>
 </div>

@@ -22,6 +22,8 @@ export class AllCartService {
     console.log(this.cartItems);
   }
 
+  // viewModal
+
   //remove cart item
   removeCartItem(product: any) {
     this.cartItems.map((a: any, index: any) => {

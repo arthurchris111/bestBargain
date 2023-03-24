@@ -10,6 +10,9 @@ import { ProductService } from '../service/product.service';
 export class ProductListComponent implements OnInit {
   displayAllProducts: any = [];
   displayAllCategories: any = [];
+  public products: any = [];
+  displaySingleItem: any = [];
+  singleItem: any = [];
 
   constructor(private services: ProductService, private cart: AllCartService) {}
 
@@ -34,6 +37,15 @@ export class ProductListComponent implements OnInit {
   allCategoryDisplay() {
     this.services.allCategories().subscribe((result) => {
       this.displayAllCategories = result;
+    });
+  }
+
+  // viewSingleItem
+  viewSingleItem(item: any) {
+    this.singleItem.map((a: any) => {
+      if (item.id === a.id) {
+        this.singleItem.push(item);
+      }
     });
   }
 }
