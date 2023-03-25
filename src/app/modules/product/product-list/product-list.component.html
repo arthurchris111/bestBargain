@@ -142,7 +142,7 @@
               </a>
 
               <!-- Button trigger modal -->
-              <a class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="viewSingleItem(item)">
+              <a class="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <span class="material-symbols-outlined">
                   zoom_in
                 </span>
@@ -170,8 +170,8 @@
       </div>
       <div class="modal-body">
         <p>ssssssssss</p>
-        <!-- <div class="d-flex shadow-sm mb-3 p-5 bg-white" *ngFor="let item of products; let i = index">
-          <div class="flex-shrink-0">
+        <div class="d-flex shadow-sm mb-3 p-5 bg-white" *ngFor="let item of displaySingleItem">
+          <div class=" flex-shrink-0">
             <img class="card-img-top image" src="{{item.images[0]}}" alt="image">
           </div>
           <div class="flex-grow-1 ms-3">
@@ -179,7 +179,7 @@
             <h5 class="card-title mb-0 fs-6 opacity-75 text-start">{{item.description}}</h5>
             <span class="card-text mt-0 text-success fw-bold">{{"$"}}{{item.price}}</span>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>

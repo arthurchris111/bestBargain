@@ -12,7 +12,7 @@ export class ProductListComponent implements OnInit {
   displayAllCategories: any = [];
   public products: any = [];
   displaySingleItem: any = [];
-  singleItem: any = [];
+  // singleItem: any = [];
 
   constructor(private services: ProductService, private cart: AllCartService) {}
 
@@ -41,11 +41,9 @@ export class ProductListComponent implements OnInit {
   }
 
   // viewSingleItem
-  viewSingleItem(item: any) {
-    this.singleItem.map((a: any) => {
-      if (item.id === a.id) {
-        this.singleItem.push(item);
-      }
+  viewSingleItem() {
+    this.services.singleProduct().subscribe((result) => {
+      this.displaySingleItem = result['products'];
     });
   }
 }
