@@ -10,8 +10,9 @@ import { ProductService } from '../service/product.service';
 export class ProductListComponent implements OnInit {
   displayAllProducts: any = [];
   displayAllCategories: any = [];
-  public products: any = [];
+  // public products: any = [];
   displaySingleItem: any = [];
+  singleItem: any = [];
   // singleItem: any = [];
 
   constructor(private services: ProductService, private cart: AllCartService) {}
@@ -41,9 +42,11 @@ export class ProductListComponent implements OnInit {
   }
 
   // viewSingleItem
-  viewSingleItem() {
+  viewSingleItem(product: any) {
     this.services.singleProduct().subscribe((result) => {
+      this.singleItem.push(product);
       this.displaySingleItem = result['products'];
+      console.log(product);
     });
   }
 }
