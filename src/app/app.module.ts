@@ -1,4 +1,3 @@
-import { AuthenticationComponent } from './modules/authentication/authentication.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 

@@ -43,10 +43,10 @@ export class ProductListComponent implements OnInit {
 
   // viewSingleItem
   viewSingleItem(product: any) {
-    this.services.singleProduct().subscribe((result) => {
-      this.singleItem.push(product);
-      this.displaySingleItem = result['products'];
-      console.log(product);
-    });
+    // this.services.singleProduct().subscribe((result) => {
+    // this.singleItem.push(product);
+    this.displaySingleItem = product;
+    console.log(product);
+    // });
   }
 }
